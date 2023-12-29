@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://hamsyat:hamsyat123@cluster0.fwszp62.mongodb.net/contactmongo",
+  "mongodb://hamsyat:hamsyat123@ac-8wlxwfg-shard-00-01.fwszp62.mongodb.net:27017,ac-8wlxwfg-shard-00-02.fwszp62.mongodb.net:27017,ac-8wlxwfg-shard-00-00.fwszp62.mongodb.net:27017/contactmongo?authSource=admin&replicaSet=atlas-11i7nt-shard-0&ssl=true",
   {
     // mongoose.connect("mongodb://127.0.0.1:27017/contactmongo", {
     useNewUrlParser: true,
