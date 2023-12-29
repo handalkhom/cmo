@@ -37,12 +37,12 @@ app.use(flash());
 
 // Halaman Home
 app.get("/", (req, res) => {
-  // const mahasiswa = [
-  //   {
-  //     nama: "Handal",
-  //     email: "hamsyat@gmail.com",
-  //   },
-  // ];
+  const mahasiswa = [
+    {
+      nama: "Handal",
+      email: "hamsyat@gmail.com",
+    },
+  ];
   res.render("index", {
     layout: "layouts/main-layout",
     nama: "Handal",
