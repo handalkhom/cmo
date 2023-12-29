@@ -1,7 +1,14 @@
 const mongoose = require("mongoose");
-mongoose.connect(
-  "mongodb://hamsyat:hamsyat123@ac-8wlxwfg-shard-00-01.fwszp62.mongodb.net:27017,ac-8wlxwfg-shard-00-02.fwszp62.mongodb.net:27017,ac-8wlxwfg-shard-00-00.fwszp62.mongodb.net:27017/contactmongo?authSource=admin&replicaSet=atlas-11i7nt-shard-0&ssl=true"
-);
+mongoose
+  .connect(
+    "mongodb://hamsyat:hamsyat123@ac-8wlxwfg-shard-00-01.fwszp62.mongodb.net:27017,ac-8wlxwfg-shard-00-02.fwszp62.mongodb.net:27017,ac-8wlxwfg-shard-00-00.fwszp62.mongodb.net:27017/contactmongo?authSource=admin&replicaSet=atlas-11i7nt-shard-0&ssl=true"
+  )
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((e) => {
+    console.log("not connected");
+  });
 
 // membuat schema (jika ingin menambah field, cari aman dengan hapus collections
 // lalu jalankan kode di bawah node ./utils/db)
