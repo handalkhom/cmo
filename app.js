@@ -104,11 +104,10 @@ app.post(
         errors: errors.array(),
       });
     } else {
-      Contact.insertMany(req.body, (error, result) => {
-        // kirimkan flash message
-        req.flash("msg", "Data contact berhasil ditambahkan!");
-        res.redirect("/contact");
-      });
+      Contact.insertMany(req.body);
+      // kirimkan flash message
+      req.flash("msg", "Data contact berhasil ditambahkan!");
+      res.redirect("/contact");
     }
   }
 );
