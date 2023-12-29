@@ -70,6 +70,7 @@ app.get("/contact", async (req, res) => {
     contacts,
     msg: req.flash("msg"),
   });
+  console.log("Ini halaman contact");
 });
 
 // Halaman form add contact
